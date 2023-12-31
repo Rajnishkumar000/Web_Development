@@ -1,0 +1,85 @@
+.calculator{
+    background-color: rgb(119, 115, 115);
+    display: block;
+    margin: auto;
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px 20px 20px 20px ;
+    width: 450px;
+    height: auto;
+}
+.button {
+    display: grid;
+    gap: 10px 5px;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    padding: 10px 5px;
+    
+    
+}
+button {
+    font-size: 20px;
+    padding: 10px 30px;
+    background: rgba(52, 50, 56, 0.773);
+    border: 1px solid rgb(41, 37, 37);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+button:hover{
+    background: rgba(20, 20, 20, 0.773);
+
+
+}
+
+
+.opr{
+    background-color: rgb(99, 147, 232);
+}
+.opr:hover{
+    background-color: rgba(34, 135, 243, 0.813);
+    border:1px solid rgb(9, 9, 9)
+}
+.clr{
+    background-color: rgb(185, 42, 42);
+}
+.clr:hover{
+    background-color: rgb(248, 5, 5);
+}
+.equal{
+    background-color: rgb(56, 164, 56);
+}
+.equal:hover{
+    background-color: rgb(11, 252, 11);
+
+}
+.screen{
+    width:450px;
+    height:80px;
+    background-color: rgb(41, 38, 38);
+    border-radius: 4px;
+    color: white;
+}
+.heading{
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style:normal;
+    font-stretch: ultra-expanded;
+    color: rgb(226, 231, 155);
+}
+
+
+.entry {
+    float: right;
+    width: 100%;
+    height: 10vh;
+    border: 0px;
+    font-size: 30px;
+    text-align: right;
+    
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+

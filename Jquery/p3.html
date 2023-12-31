@@ -1,0 +1,65 @@
+<!-- TEXT -->
+<!-- READ ONLY OUTPUT -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 27px;
+        }
+        .container{
+            color: white;
+            background: black;
+            font-weight: 500;
+            font-size: 36px;
+        }
+        h1{
+            background-color: Green;
+            text-align: center;
+            font-size: 45px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Document Ready Event</h1>
+
+<h3>You might have noticed that all jQuery methods in our examples, are inside a document ready event:</h3>
+
+<div class="container">
+    $(document).ready(function(){
+
+        // jQuery methods go here...
+      
+      });
+</div>
+
+<p>This is to prevent any jQuery code from running before the document is finished loading (is ready).</p>
+
+<p>It is good practice to wait for the document to be fully loaded and ready before working with it. This also allows you to have your JavaScript code before the body of your document, in the head <br>
+
+    Here are some examples of actions that can fail if methods are run before the document is fully loaded:</p>
+<ul>
+    <li>Trying to hide an element that is not created yet</li>
+    <li>Trying to get the size of an image that is not loaded yet</li>
+    
+</ul>
+
+<p>Tip: The jQuery team has also created an even shorter method for the document ready event:
+</p>
+
+<div class="container">
+$(function(){
+
+    // jQuery methods go here...
+  
+  });
+</div>
+<p>Use the syntax you prefer. We think that the document ready event is easier to understand when reading the code.
+</p>    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- TEST OF ON and other function -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ON </title>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(document).ready(function ()
+         {
+            $("h1").on("click", function () {
+                $(this).hide();
+            });
+
+            //same as above function 
+            // $("h1").on({
+            //     click: function () {
+            //     $(this).hide();
+            //     }
+            // });
+
+            $("h2").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "red");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function () {
+                    $(this).css("background-color", "green");
+                }
+            });
+
+
+
+
+        });
+    </script>
+    <style>
+        h1,
+        h2 {
+            background-color: cyan;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is for first</h1>
+    <h2>This is for second</h2>
+    
+
+
+</body>
+</html>
