@@ -1,0 +1,167 @@
+<html><head> 
+  <title>BMI Calculator</title> 
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&amp;display=swap" rel="stylesheet"> 
+ </head> 
+ <body> 
+  <div class="wrapper"> 
+   <div class="container"> 
+    <div class="row"> 
+     <input type="range" min="20" max="200" value="20" id="weight" oninput="calculate()"> 
+     <span id="weight-val">20 kg</span> 
+    </div> 
+    <div class="row"> 
+     <input type="range" min="100" max="250" value="100" id="height" oninput="calculate()"> 
+     <span id="height-val">100 cm</span> 
+    </div> 
+    <p id="result">20.0</p> 
+    <p id="category">Normal weight</p> 
+   </div> 
+   <a href="https://youtu.be/qeoNs5iWEGUentarget=" target="_blank">Made with  by Rajnish Kumar</a> 
+  </div> 
+  <script>
+alert("Move the sliders to set your height and weight.");   
+        
+function calculate(){
+    var bmi;
+    var result = document.getElementById("result");
+
+    var weight = parseInt(document.getElementById("weight").value);
+    document.getElementById("weight-val").textContent= weight + " kg";
+
+    var height = parseInt(document.getElementById("height").value);
+    document.getElementById("height-val").textContent= height + " cm";
+
+    bmi =( weight / Math.pow((height/100), 2)).toFixed(1);
+    result.innerHTML= bmi;
+
+    if(bmi < 18.5){
+        category = "Underweight";
+        result.style.color = "#FFC44D";
+    }
+    else if(bmi >= 18.5 && bmi <= 24.9){
+        category = "Normal weight";
+        result.style.color = "#0be881";
+    }
+    else if(bmi >= 25 && bmi <= 29.9){
+        category = "Overweight";
+        result.style.color = "#FF884D";
+    }
+    else{
+        category = "Obese";
+        result.style.color = "#ff5e57";
+    }
+    document.getElementById("category").textContent = category;
+
+}
+    </script> 
+ 
+<style id="dcoder_stylesheet">*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent ;
+}
+body{
+    height: 100vh;
+    background: -o-linear-gradient(
+        315deg,
+        #61D954,
+        #2EBF75
+    );
+    background: linear-gradient(
+        135deg,
+        #61D954,
+        #2EBF75
+    );
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.wrapper{
+    width: 50%;
+    height: 400px;
+    min-width: 330px;
+    position: absolute;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+.container{
+    background-color: #ffffff;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 25px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    -webkit-box-shadow: 25px 25px 30px rgba(0,0,0,0.15);
+            box-shadow: 25px 25px 30px rgba(0,0,0,0.15);
+}
+
+input[type="range"]{
+    width: 70%;
+    height: 3.5px;
+    -webkit-appearance: none;
+    background-color: #dcdcdc;
+    border-radius: 3px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color: #1c1c1c;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 40px;
+}
+.row span{
+    font-weight: 500;  
+}
+#result{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #0be881;
+}
+#category{
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+a{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    -webkit-box-shadow: 25px 25px 30px rgba(0,0,0,0.15);
+            box-shadow: 25px 25px 30px rgba(0,0,0,0.15);
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    color: #1c1c1c;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 10px 0;
+    border-radius: 5px;
+}</style><script id="dcoder_script"></script></body></html>
